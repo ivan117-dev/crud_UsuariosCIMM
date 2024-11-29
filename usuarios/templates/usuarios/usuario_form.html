@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuarios</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'usuarios/style.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>{% if form.instance.pk %}EDITAR USUARIO {% else %} CREAR USUARIO {% endif %}</h1>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{form.as_p}}
+            {% if usuario.foto %}
+                <div class="image-container">
+                    <img src="{{ usuario.foto.url }}" 
+                    alt="Foto de {{ usuario.nombre }}"
+                    width="150">
+                </div>
+            {% endif %}
+            <button class="btn" type="submit">Guardar</button>
+        </form>
+    </div>
+</body>
+
+</html>

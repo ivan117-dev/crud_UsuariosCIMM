@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'usuarios/style.css' %}">
+    <title>Eliminar usuarios</title>
+</head>
+
+<body>
+    <div class="container">
+        <H1>ELIMINAR CLIENTE</H1>
+        <h2>¿Estas seguro de querer eliminar a este usuario: {{usuario.nombre}} {{usuario.apellidos}}?</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="botones">
+                <button type="submit">Confirmar</button>
+                <a class="cancelar" href="{% url 'usuario_list' %}">Cancelar</a>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

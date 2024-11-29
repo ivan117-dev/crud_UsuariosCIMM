@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8-">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Plataforma para musicos independientes</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'minuz/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'minuz/css/boxicons.min.css' %}">
+    <link rel="stylesheet" href="{% static 'minuz/aos/dist/aos.css' %}">
+</head>
+
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img class="logoicon" src="{% static 'minuz/images/IconMinuz.png' %}">
+            Mi<span>nuz</span> music
+        </a>
+        <ul class="navbar">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#info">Información</a></li>
+            <li><a href="#promo">Promociones</a></li>
+            <li><a href="#footer">Contacto</a></li>
+        </ul>
+        <div class="h-derecha">
+            <a class="redes" href="#">Nuestras redes</a>
+            <a href="#"><i class='bx bxl-instagram-alt'></i></a>
+            <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+            <a href="#"><i class='bx bxl-twitter'></i></a>
+            <div class="bx bx-menu" id="menu_icon"></div>
+        </div>
+    </header>
+
+    <section class="descrip" id="home">
+        <div class="descrip-text">
+            <div class="classTypedJS">
+                <h5 id="typecimm">Descubre</h5>
+            </div>
+            <h1>Minuz Music</h1>
+            <p>
+                Nuestra mision es que todos los artistas puedantener una oportunidad en la industria musical
+                <br> No te quedes fuera, este es tu momento
+            </p>
+            <a href="#" id="btn-registro" class="btn-accion">Registrate aqui</a>
+        </div>
+    </section>
+    <section class="columnas" id="info">
+        <h2>En Minuz Music podras:</h2>
+        <br>
+        <div data-aos="fade-up-right" class="col-content">
+            <div class="row">
+                <div class="row-img">
+                    <img src="{% static 'minuz/images/composicion.jpg' %}" alt="Piano alusivo a la composicion">
+                </div>
+                <h4>Componer tus propias canciones</h4>
+            </div>
+            <div class="row">
+                <div class="row-img">
+                    <img src="{% static 'minuz/images/disco3.jpg' %}" alt="Coleccion de discos">
+                </div>
+                <h4>Distribuir tus discos en esta plataforma</h4>
+            </div>
+            <div class="row">
+                <div class="row-img">
+                    <img src="{% static 'minuz/images/foro.jpg' %}" alt="Musicos conviviendo">
+                </div>
+                <h4>Convivir con otros artistas como tu</h4>
+            </div>
+            <div class="row">
+                <div class="row-img">
+                    <img src="{% static 'minuz/images/composicion2.jpg' %}" alt="Esudio de grabacion">
+                </div>
+                <h4>Aprender a grabar y masterizar</h4>
+            </div>
+            <div class="row">
+                <div class="row-img">
+                    <img src="{% static 'minuz/images/disco.jpg' %}" alt="Disqueras">
+                </div>
+                <h4>Consigue contrato con nuestra disquera</h4>
+            </div>
+        </div>
+    </section>
+    <section class="promo" id="promo">
+        <div class="content-promo">
+            <div class="img-promo">
+                <img src="{% static 'minuz/images/composicion3.jpg' %}" alt="Curso gratis">
+            </div>
+            <div class="descrip-promo">
+                <h5>Para nuevos usuarios</h5>
+                <h2>Master class:</h2>
+                <h3>Studio Sesions</h3>
+                <p>
+                    ¿Quieres sonar como todo un pro? <br>
+                    Esta master class es para ti, aprenderas de los mejores, sobre masterizacion, grabacion, y todo el
+                    equipo que necesitas para mejorar tus canciones
+                </p>
+                <a href="#" id="btn-oferta" class="btn-accion">Aprovecha ahora</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer-content" data-aos="flip-up" id="footer">
+          <div class="footer-section about">
+            <h3>Sobre nosotros</h3>
+            <p>Minuz Music es una plataforma dedicada a impulsar a músicos independientes, brindando las herramientas necesarias para que tengan éxito en la industria musical.</p>
+          </div>
+          <div class="footer-section links">
+            <h3>Enlaces útiles</h3>
+            <ul>
+              <li><a href="#">Términos y Condiciones</a></li>
+              <li><a href="#">Política de Privacidad</a></li>
+              <li><a href="#">Ayuda / FAQ</a></li>
+            </ul>
+          </div>
+          <div class="footer-section contact">
+            <h3>Contáctanos</h3>
+            <p>Email: contacto@minuzmusic.com</p>
+            <p>Dirección: Hidalgo No. 20, Zaragoza, Ver. Mexico</p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2024 Minuz Music. Todos los derechos reservados.</p>
+        </div>
+      </footer>
+      
+</body>
+<script src="{% static 'minuz/typedJS/dist/typed.umd.js' %}"></script>
+<script src="{% static 'minuz/js/script.js' %}"></script>
+<script src="{% static 'minuz/aos/dist/aos.js' %}"></script>
+<script>
+    AOS.init();
+</script>
+</html>
+<!-- CHRISTIAN IVAN MARTINEZ MARTINEZ -->
