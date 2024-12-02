@@ -174,3 +174,94 @@ button:hover {
 button:active {
   background-color: #004494;
 }
+
+/* Ajustes generales */
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+    padding: 10px;
+  }
+
+  .usuarios-table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;  /* Hace que la tabla sea desplazable en pantallas pequeñas */
+    -webkit-overflow-scrolling: touch;  /* Mejora la experiencia en iOS */
+  }
+
+  /* Hacemos que los encabezados de la tabla se apilen y que las celdas se distribuyan */
+  .usuarios-table th, .usuarios-table td {
+    padding: 10px;
+    text-align: left;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .usuarios-table th {
+    position: sticky;
+    top: 0;  /* Fija los encabezados en la parte superior */
+    background-color: var(--main-color);
+    color: white;
+  }
+
+  /* Ajustar el tamaño de las celdas y texto */
+  .usuarios-table td {
+    font-size: 14px;  /* Reducir tamaño de texto para móviles */
+  }
+
+  .usuarios-table tbody tr {
+    display: block;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .usuarios-table td a {
+    display: block;
+    margin: 5px 0;
+  }
+
+  /* Ocultar columnas menos relevantes en dispositivos móviles (ejemplo: Contraseña) */
+  .usuarios-table td:nth-child(5), 
+  .usuarios-table th:nth-child(5) {
+    display: none;
+  }
+
+  /* Ajustes al botón de agregar usuario */
+  .btn {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  form.search {
+    flex-direction: column;
+  }
+
+  form.search input {
+    margin-bottom: 10px;
+  }
+}
+
+/* Ajuste para pantallas pequeñas más grandes (tabletas, etc.) */
+@media (max-width: 1024px) {
+  .container {
+    width: 90%;
+  }
+
+  .usuarios-table th,
+  .usuarios-table td {
+    padding: 10px;
+    font-size: 15px;
+  }
+
+  .usuarios-table td {
+    font-size: 16px;
+  }
+
+  .usuarios-table td a {
+    font-size: 14px;
+  }
+}
+
