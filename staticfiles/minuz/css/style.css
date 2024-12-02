@@ -1,0 +1,367 @@
+* {
+  margin: 0;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  font-family: sans-serif;
+}
+
+:root {
+  --text-color: #ffffff;
+  --bg-color: #000000;
+  --main-color: #53ff43;
+  --p-font: 1rem;
+  --h3-font: 20px;
+  --h2-font: 3rem;
+  --h1-font: 6rem;
+}
+
+@font-face {
+  font-family: "PlayWriteCU";
+  src: url(../fonts/playwritecuregular.ttf);
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Protest";
+  src: url(../fonts/protest.ttf);
+  font-style: normal;
+  font-weight: bold;
+}
+
+body {
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  width: 100%;
+  background: transparent;
+  padding: 30px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /*backdrop-filter: blur(35px);*/
+  transition: 0.5s ease all;
+}
+header.stickycimm {
+  padding: 8px 5%;
+  background-color: transparent;
+  backdrop-filter: blur(35px);
+}
+
+.logoicon {
+  width: 27px;
+  height: 27px;
+}
+
+.logo {
+  font-size: 35px;
+  color: var(--text-color);
+}
+
+span {
+  color: var(--main-color);
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  color: var(--text-color);
+  padding: 20px;
+  margin: 15px 20px;
+  font-size: var(--p-font);
+}
+
+.navbar a:hover {
+  color: var(--main-color);
+  border-bottom: 2px solid var(--main-color);
+}
+
+.h-derecha {
+  display: flex;
+  align-items: center;
+}
+
+.h-derecha a {
+  font-size: 20px;
+  color: var(--text-color);
+  margin-left: 5px;
+  margin-right: 15px;
+  transition: 0.5 ease all;
+}
+
+.h-derecha a:hover {
+  color: var(--main-color);
+  transform: translateY(-4px);
+}
+
+.h-derecha a:first-child {
+  font-size: var(--p-font);
+  margin-right: 20px;
+}
+
+#menu_icon {
+  color: var(--main-color);
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+  z-index: 1001;
+}
+footer {
+  background: -webkit-linear-gradient(90deg, #2f3032,#151c23,#203c23);
+  background: linear-gradient(90deg, #2f3032,#151c23,#203c23);
+  color: var(--text-color);
+  padding: 50px 15%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.footer-section {
+  margin-bottom: 30px;
+}
+
+.footer-section h3 {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: var(--main-color);
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.footer-section ul li a:hover {
+  color: var(--main-color);
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid var(--main-color);
+  padding-top: 10px;
+  font-size: 14px;
+}
+
+
+section {
+  padding: 70px 15% 60px;
+}
+.descrip {
+  height: 100vh;
+  width: 100%;
+  background: url(../images/fondoCIMM.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.descrip-text h1 {
+  font-family: "Protest";
+  font-weight: bold;
+  font-size: var(--h1-font);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.descrip-text p {
+  font-family: "PlayWriteCU";
+  font-weight: normal;
+  line-height: 30px;
+  margin-bottom: 45px;
+  font-size: var(--p-font);
+  color: #ffffffe7;
+}
+.classTypedJS {
+  display: flex;
+  flex-direction: row;
+}
+.descrip-text h5 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--main-color);
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+.btn-accion {
+  display: inline-block;
+  padding: 15px 40px;
+  background: var(--main-color);
+  color: var(--bg-color);
+  font-size: 15px;
+  font-weight: 600;
+  font-style: italic;
+  border: 1px solid var(--main-color);
+  border-radius: 20px;
+  transition: 0.5s ease all;
+}
+.btn-accion:hover {
+  background: transparent;
+  color: var(--text-color);
+  box-shadow: 0px 0px 8px 2px rgba(35, 255, 2, 0.3);
+  -webkit-box-shadow: 0px 0px 8px 2px rgba(35, 255, 2, 0.3);
+  -moz-box-shadow: 0px 0px 8px 2px rgba(35, 255, 2, 0.3);
+  transform: translateX(10px);
+}
+.col-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+  gap: 3rem;
+  align-items: center;
+  text-align: center;
+}
+.row-img {
+  overflow: hidden;
+  width: 120px;
+  height: 80px;
+  margin: 0 auto;
+  border-radius: 30px;
+  cursor: pointer;
+}
+.row-img img {
+  width: 100%;
+  transition: 0.7s ease transform;
+}
+.row-img img:hover {
+  transform: scale(1.3);
+}
+.col-content h4 {
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.col-content h4:hover {
+  color: var(--main-color);
+}
+
+.content-promo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  gap: 3rem;
+  align-items: center;
+}
+.img-promo {
+  overflow: hidden;
+  width: 400px;
+  height: 340px;
+  border-radius: 20px;
+  margin: 0 auto;
+  box-shadow: 0px 0px 15px 4px rgba(255, 255, 255, 0.435);
+  -webkit-box-shadow: 0px 0px 15px 4px rgba(255, 255, 255, 0.435);
+  -moz-box-shadow: 0px 0px 8px 15px rgba(255, 255, 255, 0.435);
+}
+.img-promo img {
+  width: 130%;
+}
+.descrip-promo h5 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--main-color);
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+.descrip-promo h2 {
+  font-family: "Protest";
+  font-weight: bold;
+  font-size: var(--h2-font);
+  line-height: 1.5;
+}
+.descrip-promo h3 {
+  font-family: "Protest";
+  font-weight: bold;
+  font-size: var(--h3-font);
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+.descrip-promo p {
+  font-family: "PlayWriteCU";
+  font-weight: normal;
+  line-height: 30px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: #ffffffe7;
+}
+
+/*Diseño responsivo*/
+@media (max-width: 900px) {
+  #menu_icon {
+    display: block;
+  }
+  .navbar {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-color);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 100%; /*Para ocultar el navbar*/
+    padding: 40px 60px;
+    transition: 0.5s ease all; /*Animacion mas fluida*/
+  }
+  .navbar a {
+    display: block;
+    font-size: 2.2rem;
+    margin: 0px 0px 40px 0px;
+  }
+  .navbar.open {
+    left: 0; /*Para mostrar el navbar*/
+  }
+  :root {
+    --p-font: 15px;
+    --h3-font: 17px;
+    --h2-font: 2rem;
+    --h1-font: 4rem;
+  }
+  section {
+    padding: 45px 5%;
+  }
+  .redes {
+    display: none;
+  }
+  header .logo{
+    width: 250px;
+  }
+  header.stickycimm {
+    padding: 7px 5%;
+  }
+  .content-promo{
+    grid-template-columns: 1fr;
+  }
+}

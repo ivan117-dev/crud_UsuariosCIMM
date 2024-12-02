@@ -25,7 +25,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-a02au8g-g0c5$%4$b5_+wttk*d2vhizi)*7ji)elpr%1#m*5tj'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+#DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -44,6 +45,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -84,7 +86,7 @@ WSGI_APPLICATION = 'crud_usuariosCIMM.wsgi.application'
 }'''
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgresql://cimm:YFBX1AikOPX14s5ES0oEnpcn67bBzvwX@dpg-ct2takhu0jms7390c1ig-a.oregon-postgres.render.com/minuz_usuarios'
+        default='postgresql://cimm:YFBX1AikOPX14s5ES0oEnpcn67bBzvwX@dpg-ct2takhu0jms7390c1ig-a/minuz_usuarios'
     )
 }
 
@@ -124,6 +126,13 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+if not DEBUG:
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'clientes', 'static')
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
