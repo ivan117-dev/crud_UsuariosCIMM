@@ -184,7 +184,7 @@ button:active {
 
   .usuarios-table {
     width: 100%;
-    display: block;
+    display: flex;
     overflow-x: auto;  /* Hace que la tabla sea desplazable en pantallas pequeñas */
     -webkit-overflow-scrolling: touch;  /* Mejora la experiencia en iOS */
   }
